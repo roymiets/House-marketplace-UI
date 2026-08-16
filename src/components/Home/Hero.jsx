@@ -23,7 +23,7 @@ function Hero() {
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600">
-              <Link to="/vendors">Explore services</Link>
+              <Link to="/services">Explore services</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full border-amber-200 bg-white text-amber-700 hover:bg-amber-50">
               <Link to="/materials">Shop materials</Link>

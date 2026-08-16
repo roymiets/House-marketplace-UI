@@ -84,7 +84,7 @@ function Dashboard() {
                   asChild
                   className="h-11 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-[0_10px_20px_rgba(251,146,60,0.25)] hover:from-amber-600 hover:to-orange-600"
                 >
-                  <Link to="/vendors">Browse vendors</Link>
+                  <Link to="/services">Browse service providers</Link>
                 </Button>
               </div>
             </div>
@@ -208,7 +208,7 @@ function Dashboard() {
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">Favourites</p>
-                  <h2 className="mt-2 text-2xl font-bold text-slate-900">Saved vendors</h2>
+                  <h2 className="mt-2 text-2xl font-bold text-slate-900">Saved service providers</h2>
                 </div>
                 <ArrowUpRight className="h-5 w-5 text-amber-500" />
               </div>
@@ -220,8 +220,8 @@ function Dashboard() {
                       <p className="font-medium text-slate-900">{name}</p>
                       <p className="text-sm text-slate-500">{category}</p>
                     </div>
-                    <Button asChild variant="outline" className="h-9 rounded-full border-amber-200 bg-white text-amber-700 hover:bg-amber-50">
-                      <Link to="/vendors">View</Link>
+                      <Button asChild variant="outline" className="h-9 rounded-full border-amber-200 bg-white text-amber-700 hover:bg-amber-50">
+                      <Link to="/services">View</Link>
                     </Button>
                   </div>
                 ))}

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Building2 } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
+import { useCart } from "@/context/CartContext";
 
 const navItemClass = ({ isActive }) =>
   [
@@ -12,6 +13,9 @@ const navItemClass = ({ isActive }) =>
   ].join(" ");
 
 function Navbar() {
+  const cart = useCart();
+  const count = cart ? cart.reduce((s, i) => s + (i.qty || 0), 0) : 0;
+
   return (
     <header className="sticky top-0 z-50 border-b border-amber-100 bg-white/80 shadow-[0_8px_30px_rgba(251,146,60,0.06)] backdrop-blur-xl">
       <div className="container mx-auto px-6">
@@ -29,8 +33,18 @@ function Navbar() {
             <NavLink to="/" className={navItemClass}>Home</NavLink>
             <NavLink to="/about" className={navItemClass}>About</NavLink>
             <NavLink to="/contact" className={navItemClass}>Contact Us</NavLink>
-            <NavLink to="/vendors" className={navItemClass}>Services</NavLink>
+            <NavLink to="/services" className={navItemClass}>Services</NavLink>
             <NavLink to="/materials" className={navItemClass}>Materials</NavLink>
+            <NavLink to="/cart" className={navItemClass}>
+              <span className="inline-flex items-center gap-2">
+                <span>Cart</span>
+                {count > 0 ? (
+                  <span className="inline-flex h-5 min-w-[20px] items-center justify-center rounded-full bg-rose-600 px-2 text-xs font-semibold text-white">
+                    {count}
+                  </span>
+                ) : null}
+              </span>
+            </NavLink>
             <NavLink to="/wishlist" className={navItemClass}>Wishlist</NavLink>
             <NavLink to="/compare" className={navItemClass}>Compare</NavLink>
             <NavLink to="/dashboard" className={navItemClass}>Dashboard</NavLink>
@@ -64,8 +78,9 @@ function Navbar() {
               <SheetContent side="right" className="bg-white">
                 <div className="mt-8 flex flex-col gap-5 text-base font-medium text-slate-700">
                   <Link to="/" className="hover:text-amber-600">Home</Link>
-                  <Link to="/vendors" className="hover:text-amber-600">Services</Link>
+                  <Link to="/services" className="hover:text-amber-600">Services</Link>
                   <Link to="/materials" className="hover:text-amber-600">Materials</Link>
+                  <Link to="/cart" className="hover:text-amber-600">Cart {count > 0 ? `(${count})` : ""}</Link>
                   <Link to="/about" className="hover:text-amber-600">About</Link>
                   <Link to="/contact" className="hover:text-amber-600">Contact Us</Link>
 

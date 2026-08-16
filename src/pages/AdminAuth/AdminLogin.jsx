@@ -32,7 +32,7 @@ function AdminLogin() {
 
               <div className="mt-8 space-y-4">
                 {[
-                  "Approve vendor listings",
+                  "Approve service provider listings",
                   "Review platform activity",
                   "Highlight premium partners",
                 ].map((item) => (
@@ -80,9 +80,9 @@ function AdminLogin() {
 
                 <div className="mt-6 space-y-3 text-center text-sm text-slate-600">
                   <p>
-                    Need vendor access?{' '}
-                    <Link to="/vendor-login" className="font-semibold text-amber-600 hover:text-amber-500">
-                      Vendor login
+                    Need service provider access?{' '}
+                    <Link to="/service-provider-login" className="font-semibold text-amber-600 hover:text-amber-500">
+                      Service provider login
                     </Link>
                   </p>
                   <p>

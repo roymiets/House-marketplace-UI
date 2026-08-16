@@ -17,7 +17,7 @@ function FeaturedVendors() {
           </div>
 
           <Button asChild variant="outline" className="rounded-full border-amber-200 bg-white px-5 text-amber-700 hover:bg-amber-50">
-            <Link to="/vendors">
+            <Link to="/services">
               View all services
             </Link>
           </Button>
@@ -77,7 +77,7 @@ function FeaturedVendors() {
                   </div>
 
                   <Button asChild className="rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600">
-                    <Link to="/vendors">
+                    <Link to="/services">
                       View profile
                     </Link>
                   </Button>

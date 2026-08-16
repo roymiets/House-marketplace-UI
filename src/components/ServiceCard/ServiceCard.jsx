@@ -61,7 +61,7 @@ function ServiceCard({ vendor, isSaved = false, onToggleWishlist }) {
           </div>
 
           <Button asChild className="rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600">
-            <Link to={`/vendors/${vendor.id}`}>View details</Link>
+            <Link to={`/services/${vendor.id}`}>View details</Link>
           </Button>
         </div>
       </CardContent>

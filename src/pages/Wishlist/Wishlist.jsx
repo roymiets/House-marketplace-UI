@@ -51,7 +51,7 @@ function Wishlist() {
 
               <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-amber-700 shadow-sm ring-1 ring-amber-100">
                 <Heart className="h-4 w-4 fill-current" />
-                {savedVendors.length} saved vendors
+                {savedVendors.length} saved service providers
               </div>
             </div>
           </header>
@@ -84,14 +84,14 @@ function Wishlist() {
               </div>
               <h2 className="mt-5 text-2xl font-semibold text-slate-900">Your shortlist is empty</h2>
               <p className="mt-3 text-slate-600">
-                Save your favorite vendors from the marketplace to compare and revisit later.
+                Save your favorite service providers from the marketplace to compare and revisit later.
               </p>
 
               <Link
-                to="/vendors"
+                to="/services"
                 className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-5 text-sm font-semibold text-white shadow-[0_10px_20px_rgba(251,146,60,0.25)] hover:from-amber-600 hover:to-orange-600"
               >
-                Explore vendors
+                Explore service providers
               </Link>
             </div>
           )}

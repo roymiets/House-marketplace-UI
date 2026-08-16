@@ -267,8 +267,8 @@ function Home() {
                   asChild
                   className="rounded-full bg-white text-amber-700 hover:bg-amber-50"
                 >
-                  <Link to="/vendors">
-                    Explore vendors
+                  <Link to="/services">
+                    Explore service providers
                   </Link>
                 </Button>
                 <Button

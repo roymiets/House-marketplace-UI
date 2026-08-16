@@ -12,7 +12,7 @@ const initialVendorMetrics = [
 ];
 
 const platformStats = [
-  { label: "Active vendors", value: "186", icon: BriefcaseBusiness },
+  { label: "Active service providers", value: "186", icon: BriefcaseBusiness },
   { label: "New enquiries", value: "482", icon: Users },
   { label: "Approval rate", value: "94%", icon: ShieldCheck },
   { label: "Revenue tracked", value: "₹24.6L", icon: ChartNoAxesCombined },
@@ -72,7 +72,7 @@ function AdminDashboard() {
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">Review queue</p>
-                  <h2 className="mt-2 text-2xl font-bold text-slate-900">Vendor approvals</h2>
+                  <h2 className="mt-2 text-2xl font-bold text-slate-900">Service provider approvals</h2>
                 </div>
                 <LayoutDashboard className="h-5 w-5 text-amber-600" />
               </div>
@@ -136,7 +136,7 @@ function AdminDashboard() {
 
               <div className="mt-6 space-y-5">
                 <div className="rounded-[1.25rem] border border-amber-100 bg-amber-50/40 p-5">
-                  <p className="text-sm text-slate-500">Reviewed vendors</p>
+                  <p className="text-sm text-slate-500">Reviewed service providers</p>
                   <p className="mt-2 text-3xl font-bold text-slate-900">{reviewedVendors}</p>
                 </div>
 
@@ -146,7 +146,7 @@ function AdminDashboard() {
                 </div>
 
                 <div className="rounded-[1.25rem] border border-amber-100 bg-amber-50/40 p-5">
-                  <p className="text-sm text-slate-500">Featured vendors</p>
+                  <p className="text-sm text-slate-500">Featured service providers</p>
                   <p className="mt-2 text-3xl font-bold text-slate-900">28</p>
                 </div>
               </div>

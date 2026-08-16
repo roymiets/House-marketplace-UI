@@ -81,7 +81,7 @@ function Quotes() {
                   Project quotes
                 </p>
                 <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
-                  My vendor offers
+                  My service provider offers
                 </h1>
               </div>
 
@@ -89,8 +89,8 @@ function Quotes() {
                 asChild
                 className="h-11 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-[0_10px_20px_rgba(251,146,60,0.25)] hover:from-amber-600 hover:to-orange-600"
               >
-                <Link to="/vendors">
-                  Explore more vendors
+                <Link to="/services">
+                  Explore more service providers
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>

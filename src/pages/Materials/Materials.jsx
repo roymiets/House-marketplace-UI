@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { materials, materialCategories } from "@/data/materials";
 import { ArrowRight, Filter, PackageCheck, Search, ShieldCheck, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useMemo, useState } from "react";
+import { useCartDispatch } from "@/context/CartContext";
 import MainLayout from "@/components/layout/MainLayout";
 
 function Materials() {
@@ -18,6 +20,16 @@ function Materials() {
       return matchesCategory && matchesSearch;
     });
   }, [searchQuery, selectedCategory]);
+
+  const dispatch = useCartDispatch();
+
+  const [recentlyAdded, setRecentlyAdded] = useState(null);
+
+  function handleAdd(item) {
+    dispatch({ type: "add", payload: { item, qty: 1 } });
+    setRecentlyAdded(item.id);
+    window.setTimeout(() => setRecentlyAdded(null), 1100);
+  }
 
   return (
     <MainLayout>
@@ -111,7 +123,9 @@ function Materials() {
                     key={item.id}
                     className="overflow-hidden rounded-[1.75rem] border border-amber-100 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.04)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(251,146,60,0.10)]"
                   >
-                    <img src={item.image} alt={item.name} className="h-48 w-full object-cover" />
+                    <Link to={`/materials/${item.id}`} className="block">
+                      <img src={item.image} alt={item.name} className="h-48 w-full object-cover" />
+                    </Link>
 
                     <div className="p-5">
                       <div className="flex items-center justify-between gap-3">
@@ -124,7 +138,11 @@ function Materials() {
                         </span>
                       </div>
 
-                      <h3 className="mt-4 text-xl font-semibold text-slate-900">{item.name}</h3>
+                      <h3 className="mt-4 text-xl font-semibold text-slate-900">
+                        <Link to={`/materials/${item.id}`} className="hover:underline">
+                          {item.name}
+                        </Link>
+                      </h3>
                       <p className="mt-1 text-sm text-slate-500">{item.brand}</p>
 
                       <div className="mt-4 flex items-end justify-between gap-3">
@@ -146,8 +164,13 @@ function Materials() {
                       </div>
 
                       <div className="mt-5 flex gap-2">
-                        <Button className="flex-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600">
-                          Add to cart
+                        <Button onClick={() => handleAdd(item)} className={
+                          "flex-1 rounded-full text-white " +
+                          (recentlyAdded === item.id
+                            ? "bg-emerald-500 scale-105 shadow-[0_8px_20px_rgba(16,185,129,0.18)]"
+                            : "bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600")
+                        }>
+                          {recentlyAdded === item.id ? "Added" : "Add to cart"}
                         </Button>
                         <Button variant="outline" className="rounded-full border-amber-200 bg-white text-amber-700 hover:bg-amber-50">
                           Quote

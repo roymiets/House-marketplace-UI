@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar/Navbar";
-import VendorNavbar from "@/components/Navbar/VendorNavbar";
+import ServiceNavbar from "@/components/Navbar/ServiceNavbar";
 import AdminNavbar from "@/components/Navbar/AdminNavbar";
 import Footer from "@/components/layout/Footer";
 import { useLocation } from "react-router-dom";
@@ -7,14 +7,14 @@ import { useLocation } from "react-router-dom";
 function MainLayout({ children }) {
   const { pathname } = useLocation();
   const vendorRoutes = [
-    "/vendor-admin",
-    "/vendor-leads",
-    "/vendor-profile",
-    "/vendor-quotes",
-    "/vendor-payments",
-    "/vendor-inquiries",
-    "/vendor-login",
-    "/vendor-register",
+    "/service-provider-admin",
+    "/service-provider-leads",
+    "/service-provider-profile",
+    "/service-provider-quotes",
+    "/service-provider-payments",
+    "/service-provider-inquiries",
+    "/service-provider-login",
+    "/service-provider-register",
   ];
 
   const adminRoutes = [
@@ -30,6 +30,11 @@ function MainLayout({ children }) {
   const isVendorArea = vendorRoutes.some(
     (route) => pathname === route || pathname.startsWith(`${route}/`)
   );
+  // Treat supplier pages the same as service-provider area so suppliers see the
+  // service-provider navbar instead of the default customer navbar.
+  const isSupplierPath = pathname === "/supplier-admin" || pathname.startsWith("/supplier-");
+
+  const showServiceNavbar = isVendorArea || isSupplierPath;
 
   const isAdminArea = adminRoutes.some(
     (route) => pathname === route || pathname.startsWith(`${route}/`)
@@ -37,7 +42,7 @@ function MainLayout({ children }) {
 
   return (
     <>
-      {isAdminArea ? <AdminNavbar /> : isVendorArea ? <VendorNavbar /> : <Navbar />}
+      {isAdminArea ? <AdminNavbar /> : showServiceNavbar ? <ServiceNavbar /> : <Navbar />}
       <main>{children}</main>
       <Footer />
     </>

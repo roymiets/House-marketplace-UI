@@ -9,10 +9,10 @@ const values = [
     title: "Trusted connections",
     text: "We help homeowners discover professionals they can genuinely trust for one of their biggest investments.",
   },
-  {
+    {
     icon: ShieldCheck,
     title: "Verified quality",
-    text: "Every vendor is reviewed for craftsmanship, reliability, and project delivery standards.",
+    text: "Every service provider is reviewed for craftsmanship, reliability, and project delivery standards.",
   },
   {
     icon: Sparkles,
@@ -53,7 +53,7 @@ function About() {
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Button asChild className="rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600">
-                    <Link to="/vendors">Explore vendors</Link>
+                    <Link to="/services">Explore service providers</Link>
                   </Button>
                   <Button asChild variant="outline" className="rounded-full border-amber-200 bg-white text-amber-700 hover:bg-amber-50">
                     <Link to="/register">Create account</Link>

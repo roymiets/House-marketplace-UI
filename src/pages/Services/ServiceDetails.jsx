@@ -189,7 +189,7 @@ function ServiceDetails() {
                 <Button variant="outline" className="h-12 rounded-full border-amber-200 bg-white text-amber-700 hover:bg-amber-50">
                   <span className="inline-flex items-center gap-2">
                     <MessageCircleMore className="h-4 w-4" />
-                    Contact vendor
+                    Contact service provider
                   </span>
                 </Button>
               </div>

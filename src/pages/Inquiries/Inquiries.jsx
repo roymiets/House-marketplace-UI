@@ -51,8 +51,8 @@ function Inquiries() {
                 asChild
                 className="h-11 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-[0_10px_20px_rgba(251,146,60,0.25)] hover:from-amber-600 hover:to-orange-600"
               >
-                <Link to="/vendors">
-                  Explore vendors
+                <Link to="/services">
+                  Explore service providers
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -78,14 +78,14 @@ function Inquiries() {
             <section className="mt-8 rounded-[2rem] border border-dashed border-amber-200 bg-white p-10 text-center shadow-[0_16px_40px_rgba(15,23,42,0.04)]">
               <Clock3 className="mx-auto h-12 w-12 text-amber-400" />
               <h2 className="mt-4 text-2xl font-bold text-slate-900">No enquiries yet</h2>
-              <p className="mt-3 text-slate-600">
-                Start by sending a quick enquiry from any vendor profile to track leads here.
+                <p className="mt-3 text-slate-600">
+                Start by sending a quick enquiry from any service provider profile to track leads here.
               </p>
               <Button
                 asChild
                 className="mt-6 h-11 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600"
               >
-                <Link to="/vendors">Browse vendors</Link>
+                <Link to="/services">Browse service providers</Link>
               </Button>
             </section>
           ) : (

@@ -112,9 +112,15 @@ function Login() {
                     </Link>
                   </p>
                   <p>
-                    Are you a vendor?{' '}
-                    <Link to="/vendor-login" className="font-semibold text-amber-600 hover:text-amber-500">
-                      Vendor login
+                    Are you a service provider?{' '}
+                    <Link to="/service-provider-login" className="font-semibold text-amber-600 hover:text-amber-500">
+                      Service provider login
+                    </Link>
+                  </p>
+                  <p>
+                    Are you a supplier?{' '}
+                    <Link to="/supplier-login" className="font-semibold text-amber-600 hover:text-amber-500">
+                      Supplier login
                     </Link>
                   </p>
                   <p>

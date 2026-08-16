@@ -36,7 +36,7 @@ function Compare() {
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">
-                  Vendor comparison
+                  Service provider comparison
                 </p>
                 <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
                   Compare your saved picks
@@ -44,11 +44,11 @@ function Compare() {
               </div>
 
               <Link
-                to="/vendors"
+                to="/services"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-amber-600 hover:text-amber-500"
               >
                 <ArrowLeft className="h-4 w-4" />
-                Back to vendors
+                Back to service providers
               </Link>
             </div>
           </header>
@@ -71,8 +71,8 @@ function Compare() {
                                 {vendor.rating}
                               </div>
                             </div>
-                            <Button asChild className="h-9 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600">
-                              <Link to={`/vendors/${vendor.id}`}>View profile</Link>
+                              <Button asChild className="h-9 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600">
+                              <Link to={`/services/${vendor.id}`}>View profile</Link>
                             </Button>
                           </div>
                         </th>
@@ -126,20 +126,20 @@ function Compare() {
 
               <div className="mt-8 flex justify-end">
                 <Button asChild className="h-11 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-[0_10px_20px_rgba(251,146,60,0.25)] hover:from-amber-600 hover:to-orange-600">
-                  <Link to="/vendors">Continue shopping <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  <Link to="/services">Continue shopping <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
               </div>
             </>
           ) : (
-            <div className="mt-8 rounded-[2rem] border border-dashed border-amber-200 bg-white p-12 text-center shadow-[0_16px_40px_rgba(15,23,42,0.02)]">
-              <h2 className="text-2xl font-semibold text-slate-900">Save at least two vendors to compare</h2>
-              <p className="mt-3 text-slate-600">Shortlist a few vendors from the marketplace and come back here to see side-by-side details.</p>
+              <div className="mt-8 rounded-[2rem] border border-dashed border-amber-200 bg-white p-12 text-center shadow-[0_16px_40px_rgba(15,23,42,0.02)]">
+              <h2 className="text-2xl font-semibold text-slate-900">Save at least two service providers to compare</h2>
+              <p className="mt-3 text-slate-600">Shortlist a few service providers from the marketplace and come back here to see side-by-side details.</p>
 
               <Link
-                to="/vendors"
+                to="/services"
                 className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-5 text-sm font-semibold text-white shadow-[0_10px_20px_rgba(251,146,60,0.25)] hover:from-amber-600 hover:to-orange-600"
               >
-                Explore vendors
+                Explore service providers
               </Link>
             </div>
           )}
