@@ -1,12 +1,11 @@
 import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Home/Hero";
-import Categories from "@/components/home/Categories";
-import FeaturedVendors from "@/components/home/FeaturedVendors";
-import SearchSection from "@/components/home/SearchSection";
+import Categories from "@/components/Home/Categories";
+import FeaturedVendors from "@/components/Home/FeaturedVendors";
+import SearchSection from "@/components/Home/SearchSection";
 import { Button } from "@/components/ui/button";
 import { materials } from "@/data/materials";
 import {
-  ArrowRight,
   BadgeCheck,
   CalendarCheck2,
   MapPin,

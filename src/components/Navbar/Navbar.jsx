@@ -31,9 +31,7 @@ function Navbar() {
 
           <nav className="hidden items-center gap-2 rounded-full border border-amber-100 bg-white/80 p-1.5 shadow-sm md:flex">
             <NavLink to="/" className={navItemClass}>Home</NavLink>
-            <NavLink to="/about" className={navItemClass}>About</NavLink>
-            <NavLink to="/contact" className={navItemClass}>Contact Us</NavLink>
-            <NavLink to="/services" className={navItemClass}>Services</NavLink>
+             <NavLink to="/services" className={navItemClass}>Services</NavLink>
             <NavLink to="/materials" className={navItemClass}>Materials</NavLink>
             <NavLink to="/cart" className={navItemClass}>
               <span className="inline-flex items-center gap-2">
@@ -48,6 +46,8 @@ function Navbar() {
             <NavLink to="/wishlist" className={navItemClass}>Wishlist</NavLink>
             <NavLink to="/compare" className={navItemClass}>Compare</NavLink>
             <NavLink to="/dashboard" className={navItemClass}>Dashboard</NavLink>
+               <NavLink to="/about" className={navItemClass}>About</NavLink>
+            <NavLink to="/contact" className={navItemClass}>Contact Us</NavLink>
           </nav>
 
           <div className="hidden items-center gap-3 md:flex">
